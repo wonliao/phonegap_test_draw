@@ -47,7 +47,7 @@
     
         function onBodyLoad()
         {		
-			console.log("onBodyLoad");
+			//console.log("onBodyLoad");
 		
             document.addEventListener("deviceready", onDeviceReady, false);
             document.addEventListener("touchmove", function (e) { e.preventDefault(); return false; }, false);
@@ -76,7 +76,7 @@
 				evt.preventDefault();
                 var x = evt.touches[0].pageX;
 				var y = evt.touches[0].pageY;
-				console.log( x + "," + y );
+				//console.log( x + "," + y );
 
                 // 畫線
 				context.strokeStyle = "rgba(255, 255, 255, 1)";
@@ -135,7 +135,7 @@
         // 接收到 server 傳來的訊息
 		function onMessage(evt) {
 
-			console.log( "onMessage:" + evt.data );
+			//console.log( "onMessage:" + evt.data );
 			
 			switch( evt.data ) {
 			case "clear":
@@ -152,7 +152,7 @@
 				var temp = evt.data.split(",");
                 var x = temp[0] * screenWidth;
 				var y = temp[1] * screenHeight;
-				console.log( x + "," + y );
+				//console.log( x + "," + y );
 		
 				if( oldX == 0 ) oldX = x;
 				if( oldY == 0 ) oldY = y;
@@ -176,7 +176,7 @@
 		}
 		
 		function onError(evt) { 
-			console.log( evt.data );
+			//console.log( evt.data );
 		}
 
 
